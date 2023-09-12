@@ -7,6 +7,8 @@ class Program
 {
     public static void Main()
     {
+        User user = new User("test_login", "test_username", 2);
+
         char task;
         do
         {
@@ -78,6 +80,17 @@ class Program
 
                     break;
 
+                case '4':
+                    Console.WriteLine();
+                    for (int line = 0; line < 45; ++line) { Console.Write('-'); }
+                    Console.WriteLine();
+                    user.displayUser();
+                    for (int line = 0; line < 45; ++line) { Console.Write('-'); }
+                    Console.WriteLine();
+
+
+                    break;
+
                 case '5':
                     Console.WriteLine();
                     Console.WriteLine("Exitig...");
@@ -85,6 +98,7 @@ class Program
                 default:
                     Console.WriteLine();
                     Console.WriteLine("Error in choosing task. ");
+                    Console.WriteLine("Exiting...");
                     return;
             }
         } while (task != '5');
