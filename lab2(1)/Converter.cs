@@ -47,7 +47,7 @@ class Converter
                     break;
                 }
                 double convertedAmount = 0.0;
-                Console.WriteLine($"Enter how much you want to convert from UAH: ");
+                Console.WriteLine($"Enter how much do you want to convert: ");
                 double uahAmount = double.Parse(Console.ReadLine());
                 switch (currencyChoice)
                 {
@@ -81,7 +81,7 @@ class Converter
                     break;
                 }
                 double convertedAmountSecond = 0.0;
-                Console.WriteLine($"Enter how much you want to convert from UAH: ");
+                Console.WriteLine($"Enter how much do you want to convert: ");
                 double uahAmountSecond = double.Parse(Console.ReadLine());
 
                 switch (currencyChoiceSecond)
