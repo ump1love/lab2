@@ -87,15 +87,15 @@ class Converter
                 switch (currencyChoiceSecond)
                 {
                     case 1:
-                        convertedAmount = m_usd / uahAmountSecond;
+                        convertedAmount = m_usd * uahAmountSecond;
                         Console.WriteLine($"Converted amount: {convertedAmount} USD. With the dollar exchange rate of {m_usd}");
                         break;
                     case 2:
-                        convertedAmount = m_eur / uahAmountSecond;
+                        convertedAmount = m_eur * uahAmountSecond;
                         Console.WriteLine($"Converted amount: {convertedAmount} EUR. With the euro exchange rate of {m_eur}");
                         break;
                     case 3:
-                        convertedAmount = m_pln / uahAmountSecond;
+                        convertedAmount = m_pln * uahAmountSecond;
                         Console.WriteLine($"Converted amount: {convertedAmount} PLN. With the zloty exchange rate of {m_pln}");
                         break;
                     default:

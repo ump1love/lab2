@@ -12,8 +12,12 @@ class Program
         char task;
         do
         {
-            start:
+        start:
             Console.WriteLine("Choose what task do you want to check, from 1 to 4 or 5 for exit: ");
+            Console.WriteLine("1 - Address");
+            Console.WriteLine("2 - Converter");
+            Console.WriteLine("3 - Employee");
+            Console.WriteLine("4 - User");
             task = Console.ReadKey().KeyChar;
 
             switch (task)
