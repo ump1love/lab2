@@ -7,8 +7,6 @@ class Program
 {
     public static void Main()
     {
-        User user = new User("test_login", "test_username", 2);
-
         char task;
         do
         {
@@ -18,6 +16,7 @@ class Program
             Console.WriteLine("2 - Converter");
             Console.WriteLine("3 - Employee");
             Console.WriteLine("4 - User");
+            Console.WriteLine("5 - Exit");
             task = Console.ReadKey().KeyChar;
 
             switch (task)
@@ -87,8 +86,23 @@ class Program
                 case '4':
                     Console.WriteLine();
                     for (int line = 0; line < 45; ++line) { Console.Write('-'); }
-                    Console.WriteLine();
-                    user.displayUser();
+                    User user = new User();
+        char choice;
+        do
+        {
+            choice = user.UserChoice();
+            switch (choice)
+            {
+                case '1': user.UserCreation(); break;
+                case '2': user.UserDel(); break;
+                case '3':
+                    Console.WriteLine("\n" +
+                                      "\n" +
+                                      "User information: ");
+                    Console.WriteLine(user.UserInfo()); break;
+            }
+        } while (choice != '4');
+        if (choice == '4') { Console.WriteLine('\n' + "Exiting..."); }
                     for (int line = 0; line < 45; ++line) { Console.Write('-'); }
                     Console.WriteLine();
 
